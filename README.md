@@ -3,7 +3,7 @@ Lbyarch x86-to-C interface programming project
 
 The program is done under the requirement of LBYARCH’s MP2 with the following specs:
 
-![sdot specs](LBYARCH/PNGs/lbyarch%20specs.PNG)
+![sdot specs]([LBYARCH/PNGs/lbyarch%20specs.PNG](https://github.com/KennyTeear/LBYARCH/blob/main/PNGs/lbyarch%20specs.PNG))
 
 
 ## The C Program
