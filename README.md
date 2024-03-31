@@ -21,7 +21,8 @@ The sanity check done to see the correctness of both the C and assembly programs
 
 ## Results C & x86-64 
 
-### SAMPLE ERROR MESSAGE
+### SAMPLE ERROR MESSAGE 
+By changing a value right before the checker.
 ![SAMPLE ERROR](PNGs/sample%20error.PNG)
 ### 2^20 DEBUG C & x86-64
 ![2^20 Debug](PNGs/2^20%20debug.PNG)
