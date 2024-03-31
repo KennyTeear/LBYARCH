@@ -17,14 +17,17 @@ The C program allows the calling of both C and assembly kernels. The C program a
 
 ## Results 
 
-### 2^20
-![2^20 samples](http://url/to/img.png)
-![2^20 stats](http://url/to/img.png)
+### 2^20 DEBUG
+![2^20 Debug](PNGs/2^20%20debug.PNG)
+### 2^20 RELEASE
+![2^20 Release](PNGs/2^20%20release.PNG)
 
-### 2^24
-![2^24 samples](http://url/to/img.png)
-![2^24 stats](http://url/to/img.png)
+### 2^24 DEBUG
+![2^24 Debug](PNGs/2^24%20debug.PNG)
+### 2^24 RELEASE
+![2^24 Release](PNGs/2^24%20release.PNG)
 
-### 2^29
-![2^24 samples](http://url/to/img.png)
-![2^24 stats](http://url/to/img.png)
+### 2^29 DEBUG
+![2^20 Debug](PNGs/2^29%20debug.PNG)
+### 2^29 RELEASE
+![2^29 Release](PNGs/2^29%20release.PNG)
