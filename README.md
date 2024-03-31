@@ -3,7 +3,8 @@ Lbyarch x86-to-C interface programming project
 
 The program is done under the requirement of LBYARCH’s MP2 with the following specs:
 
-![sdot specs](LBYARCH/PNGs/lbyarch specs.PNG)
+![sdot specs](LBYARCH/PNGs/lbyarch%20specs.PNG)
+
 
 ## The C Program
 
@@ -11,7 +12,7 @@ The C program allows the calling of both C and assembly kernels. The C program a
 
 ## Kernel Comparison and Analysis
 
-The assembly kernel is clearly faster than the C kernel, where the speed difference ranges between 1-5%. But as the input size grows exponentially, the difference in average speed between the two kernels becomes insignificant. 
+
 
 
 ## Results 
@@ -24,6 +25,6 @@ The assembly kernel is clearly faster than the C kernel, where the speed differe
 ![2^24 samples](http://url/to/img.png)
 ![2^24 stats](http://url/to/img.png)
 
-### 2^20
+### 2^29
 ![2^24 samples](http://url/to/img.png)
 ![2^24 stats](http://url/to/img.png)
