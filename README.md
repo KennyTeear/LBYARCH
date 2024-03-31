@@ -15,19 +15,19 @@ The C program allows the calling of both C and assembly kernels. The C program a
 
 
 
-## Results 
+## Results C & x86-64 
 
-### 2^20 DEBUG
+### 2^20 DEBUG C & x86-64
 ![2^20 Debug](PNGs/2^20%20debug.PNG)
-### 2^20 RELEASE
+### 2^20 RELEASE C & x86-64
 ![2^20 Release](PNGs/2^20%20release.PNG)
 
-### 2^24 DEBUG
+### 2^24 DEBUG C & x86-64
 ![2^24 Debug](PNGs/2^24%20debug.PNG)
-### 2^24 RELEASE
+### 2^24 RELEASE C & x86-64
 ![2^24 Release](PNGs/2^24%20release.PNG)
 
-### 2^29 DEBUG
+### 2^29 DEBUG C & x86-64
 ![2^20 Debug](PNGs/2^29%20debug.PNG)
-### 2^29 RELEASE
+### 2^29 RELEASE C & x86-64
 ![2^29 Release](PNGs/2^29%20release.PNG)
