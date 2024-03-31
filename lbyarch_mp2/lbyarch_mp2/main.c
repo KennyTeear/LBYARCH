@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+
 // asm
 extern float DotProduct(float* A, float* B, int n);
 
@@ -9,35 +10,50 @@ float dotProductC(const float* A, const float* B, int n);
 void initializeVectors(float* vecA, float* vecB, int n);
 
 int main() {
-    int n = 1 << 30; //  2^20 vector size
-    float* A, * B, sdotC, sdotASM;
+    int n = 1 << 29; // 2^20 vector size
+    float* A, * B;
+    float sdotC = 0.0f, sdotASM = 0.0f;
 
     A = (float*)malloc(n * sizeof(float));
     B = (float*)malloc(n * sizeof(float));
 
     initializeVectors(A, B, n);
 
-    clock_t startC = clock();
-    sdotC = dotProductC(A, B, n);
-    clock_t endC = clock();
-    double cpuTimeC = ((double)(endC - startC)) / CLOCKS_PER_SEC;
+    const int iterations = 30;
+    double totalCpuTimeC = 0, totalCpuTimeASM = 0;
+    int resultsMatch = 1;
+
+    for (int i = 0; i < iterations; i++) {
+        clock_t startC = clock();
+        sdotC = dotProductC(A, B, n);
+        clock_t endC = clock();
+        totalCpuTimeC += ((double)(endC - startC)) / CLOCKS_PER_SEC;
+
+        clock_t startASM = clock();
+        sdotASM = DotProduct(A, B, n);
+        clock_t endASM = clock();
+        totalCpuTimeASM += ((double)(endASM - startASM)) / CLOCKS_PER_SEC;
+
+        if (sdotC != sdotASM) {
+            resultsMatch = 0;
+            printf("Discrepancy found at iteration %d: C = %f, ASM = %f\n", i + 1, sdotC, sdotASM);
+            break;
+        }
+    }
+
+    double avgCpuTimeC = totalCpuTimeC / iterations;
+    double avgCpuTimeASM = totalCpuTimeASM / iterations;
 
     printf("Dot Product (C): %f\n", sdotC);
-    printf("Time taken (C): %f seconds\n", cpuTimeC);
-
-    clock_t startASM = clock();
-    sdotASM = DotProduct(A, B, n);
-    clock_t endASM = clock();
-    double cpuTimeASM = ((double)(endASM - startASM)) / CLOCKS_PER_SEC;
-
     printf("Dot Product (ASM): %f\n", sdotASM);
-    printf("Time taken (ASM): %f seconds\n", cpuTimeASM);
+    printf("Average Time taken (C): %f seconds\n", avgCpuTimeC);
+    printf("Average Time taken (ASM): %f seconds\n", avgCpuTimeASM);
 
-    if (sdotC == sdotASM) {
-        printf("The x86-64 kernel output is correct\n");
+    if (resultsMatch) {
+        printf("All iterations produced matching results. The x86-64 kernel output is correct.\n");
     }
     else {
-        printf("The x86-64 kernel output is wrong\n");
+        printf("There were discrepancies in the output.\n");
     }
 
     free(A);
