@@ -17,7 +17,7 @@ The sanity check done to see the correctness of both the C and assembly programs
 ## Kernel Comparison and Analysis
 
 DEBUG AVERAGE TIME COMPARISON OF C AND ASM
-|  Average Time  |  C  |  ASSEMBLY  | 
+|  TEST  |  C AVERAGE TIME  |  ASSEMBLY AVERAGE TIME  | 
 | ------------- | ------------- | ------------- |
 |  2^20  |  0.002633 seconds  |  0.000833 seconds  |
 |  2^24  |  0.043700 seconds  |  0.012100 seconds  |
