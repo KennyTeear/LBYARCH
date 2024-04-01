@@ -16,8 +16,14 @@ The sanity check done to see the correctness of both the C and assembly programs
 
 ## Kernel Comparison and Analysis
 
+DEBUG AVERAGE TIME COMPARISON OF C AND ASM
+|  Average Time  |  C  |  ASSEMBLY  | 
+| ------------- | ------------- | ------------- |
+|  2^20  |  0.002633 seconds  |  0.000833 seconds  |
+|  2^24  |  0.043700 seconds  |  0.012100 seconds  |
+|  2^29  |  1.422933 seconds  |  0.039233 seconds  |
 
-
+The average time for the assembly kernel is generally faster than its C counterpart. As the test variables grow arbitrarily large, the time it takes to complete the program rises as well, but there is a significant period between the time it takes for the C kernel to finish and its assembly counterpart. The comparison shows that the performance of the assembly kernel outperforms its C counterpart. However, taking into consideration the readability and complexity of the written codes, the assembly kernel is more prone to errors than its C counterpart.
 
 ## Results C & x86-64 
 
