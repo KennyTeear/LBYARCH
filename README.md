@@ -21,9 +21,18 @@ DEBUG AVERAGE TIME COMPARISON OF C AND ASM
 | ------------- | ------------- | ------------- |
 |  2^20  |  0.002633 seconds  |  0.000833 seconds  |
 |  2^24  |  0.043700 seconds  |  0.012100 seconds  |
-|  2^29  |  1.422933 seconds  |  0.039233 seconds  |
+|  2^29  |  1.422933 seconds  |  0.392833 seconds  |
 
-The average time for the assembly kernel is generally faster than its C counterpart. As the test variables grow arbitrarily large, the time it takes to complete the program rises as well, but there is a significant period between the time it takes for the C kernel to finish and its assembly counterpart. The comparison shows that the performance of the assembly kernel outperforms its C counterpart. However, taking into consideration the readability and complexity of the written codes, the assembly kernel is more prone to errors than its C counterpart.
+The average time for the assembly kernel is generally faster than its C counterpart. As the test variables grow arbitrarily large, the time it takes to complete the program also rises. Still, there is a significant period between the time it takes for the C kernel to finish and its assembly counterpart. The comparison shows that the performance of the assembly kernel outperforms its C counterpart. However, taking into consideration the readability and complexity of the written codes, the assembly kernel is more prone to errors than its C counterpart.
+
+RELEASE AVERAGE TIME COMPARISON OF C AND ASM
+|  TEST  |  C AVERAGE TIME  |  ASSEMBLY AVERAGE TIME  | 
+| ------------- | ------------- | ------------- |
+|  2^20  |  0.000733 seconds  |  0.000767 seconds  |
+|  2^24  |  0.012167 seconds  |  0.012133 seconds  |
+|  2^29  |  0.388567 seconds  |  0.392333 seconds  |
+
+For release, the C kernel runs closely faster in comparison with the assembly kernel. For larger values, the C kernel runs faster for the release mode than its counterpart. This would infer that the release mode made the C kernel run faster due to the optimization process that is not present during the debugging mode where the program checks for bugs. However, looking closely at the values of the average time for assembly for debug and release, it shows a similar scaling. The C kernel runtime improved at release mode.
 
 ## Results C & x86-64 
 
